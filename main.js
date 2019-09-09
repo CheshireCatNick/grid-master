@@ -52,8 +52,10 @@ kl.init(start, end, config.pair, config.interval).then(() => {
             bestGridQuant = gridQuant;
         }
     }
+    const days = (end - start) / 86400000;
+    const annualReturn = round(maxProfit * 365 / days * 100);
     console.log('Best grid quantity:', bestGridQuant);
-    console.log(`Estimated annual return: ${round(maxProfit * 365 * 100)}%`);
+    console.log(`Estimated annual return: ${annualReturn}%`);
 });
 
 
