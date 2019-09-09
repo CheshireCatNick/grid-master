@@ -1,0 +1,29 @@
+{
+  "name": "grid-master",
+  "version": "1.0.0",
+  "description": "Backtesting and paramter optimization tool for grid trading.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CheshireCatNick/grid-master.git"
+  },
+  "keywords": [
+    "Grid Trading",
+    "Parameter Optimization",
+    "Backtesting Tool"
+  ],
+  "author": "Nicky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CheshireCatNick/grid-master/issues"
+  },
+  "homepage": "https://github.com/CheshireCatNick/grid-master#readme",
+  "dependencies": {
+    "js-lib": "github:CheshireCatNick/js-lib",
+    "moment": "^2.24.0"
+  }
+}
