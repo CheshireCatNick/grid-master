@@ -3,13 +3,14 @@
  * @author: Nicky
  */
 const RestClient = require('js-lib/rest-client');
-
+const config = require('../config');
 const host = 'www.pionex.com'
 const port = 443;
 class KLine {
 
     backtest(orders) {
         let totalProfit = 0, sellCount = 0, buyCount = 0;
+        const initPrice = this.candles[0].open;
         function sellToPrice(orders, price) {
             let profit = 0;
             let start = orders.findIndex(order => !order.activate);
@@ -18,6 +19,9 @@ class KLine {
                 console.log(`sell operation @ ${orders[start - 1].price}`);
                 totalProfit -= 0.0005;
                 if (orders[start - 1].init) {
+                    if (config.includeInitProfit) {
+                        profit += (orders[start - 1].price - initPrice) / initPrice;
+                    }
                     orders[start - 1].init = false;
                 }
                 else {
