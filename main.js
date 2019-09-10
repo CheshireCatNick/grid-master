@@ -42,7 +42,7 @@ console.log('end:', end.toString());
 // get k-line
 const kl = new KLine();
 kl.init(start, end, config.pair, config.interval).then(() => {
-    let maxProfit = -Infinity, bestGridQuant = 2;
+    let maxProfit = -Infinity, bestGridQuant = config.gridQuantRange[0];
     for (let gridQuant = config.gridQuantRange[0]; gridQuant <= config.gridQuantRange[1]; gridQuant++) {
         console.log('testing grid quantity =', gridQuant);
         const orders = createOrders(gridQuant, kl.candles[0].open);
