@@ -80,7 +80,7 @@ class KLine {
         //console.log(this.candles);
         console.log('sell operation:', sellCount, 'buy operation:', buyCount);
         totalProfit /= orders.length + 1;
-        console.log('daily profit: ', totalProfit);
+        console.log('period profit: ', totalProfit);
         return totalProfit;
     }
     init(start, end, pair, interval) {
