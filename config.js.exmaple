@@ -26,5 +26,5 @@ module.exports = {
     // [2, 99]
     gridQuantRange: [2, 99],
     // whether to use start open price as buy-in price to calculate init profit
-    includeInitProfit: true
+    includeInitProfit: false
 };
