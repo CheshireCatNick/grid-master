@@ -86,7 +86,7 @@ class KLine {
     init(start, end, pair, interval) {
         this.pair = pair.split('-');
         const path = '/kline/query_unite_candle_data?' + 
-            `base=${this.pair[0]}&quote=${this.pair[1]}&market=pionex&` +
+            `base=${this.pair[0]}&quote=${this.pair[1]}&market=pionex.v2&` +
             `start=${start.unix()}&end=${end.unix()}&interval=${interval}&from=web`;
         
         return this.restClient.get(path, {}).then(d => {
