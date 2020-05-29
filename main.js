@@ -3,8 +3,8 @@ const config = require('./config');
 const KLine = require('./objects/k-line');
 const moment = require('moment');
 
+const round = n => Math.round(n * 10000) / 10000;
 const isProvided = s => s !== undefined && s !== '';
-const round = n => Math.round(n * 100) / 100;
 function createOrders(gridQuant, currentPrice) {
     const delta = (config.upperLimit - config.lowerLimit) / (gridQuant - 1);
     const orders = [];
