@@ -24,6 +24,6 @@
   "homepage": "https://github.com/CheshireCatNick/grid-master#readme",
   "dependencies": {
     "js-lib": "github:CheshireCatNick/js-lib",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   }
 }
